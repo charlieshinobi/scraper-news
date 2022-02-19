@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+
+
+<!-- <div class="jumbotron centered"> -->
+  <div class="container">
+    
+    <h1 class="display-6">Scraping news - Settings</h1>
+    <hr>
+    
+    <p>
+      <div class="row">
+        <div class="col-md-8">
+        <form method="post" action="/setscraper">
+            <div class="form-group">
+                <label class="form-label" for="url">URL</label>
+                <input name="url" id="url" placeholder="SET URL" class="form-control" type="text" value="https://heraldodemexico.com.mx/espectaculos/">
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="url">Title</label>
+                <input name="title" id="title" placeholder="SET TITLE" class="form-control" type="text" value="#loop > article:nth-child(1) > div > div.col-md-9.col-lg-8 > div > header > div > h2 > a > span">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="url">Link</label>
+              <input name="link" id="link" placeholder="SET LINK" class="form-control" type="text" value="#loop > article:nth-child(1) > div > div.col-md-9.col-lg-8 > div > header > div">
+          </div>
+            <div class="form-group">
+                <label class="form-label" for="category">Category</label>
+                <input name="category" id="category" placeholder="SET CATEGORY" class="form-control" type="text" value="#loop > article:nth-child(1) > div > div.col-md-9.col-lg-8 > div > header > div > div > span.article__meta--category > a">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="category">Category Filter</label>
+              <input name="categoryfilter" id="categoryfilter" placeholder="SET CATEGORY FILTER" class="form-control" type="text" value="Espectaculos">
+          </div>
+            <div class="form-group">
+                <label class="form-label" for="description">Description</label>
+                <input name="description" id="description" placeholder="SET DESCRIPTION" class="form-control" type="text" value="#loop > article:nth-child(1) > div > div.col-md-9.col-lg-8 > div > div">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">Scrap</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </p>
+
+  </div>
+<!-- </div> -->
+
+<%- include('partials/footer') %>

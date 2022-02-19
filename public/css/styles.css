@@ -1,0 +1,13 @@
+
+body {
+  background-color: #E8ECEF;
+}
+
+a{
+ color: deepskyblue; 
+}
+
+a:hover{
+  color: deepskyblue; 
+  text-decoration: underline;
+}

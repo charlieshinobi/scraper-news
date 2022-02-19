@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+
+
+<!-- <div class="jumbotron centered"> -->
+  <div class="container">
+    
+    <h1 class="display-6">Scraping news </h1>
+    <hr>
+    
+    <p>
+      <div class="row">
+        <% passNews.forEach(function(News){ %>
+          
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                  <div><h4><a href="<%=News.getUrls;%>" target="_blank"><%=News.getTitles;%></a></div>
+          <div><%=News.getDescriptions;%></div>
+          <div>
+          <span class="badge bg-warning text-dark"><%=News.getCategories;%></span></div>
+              </div>
+            </div>
+          </div>
+          
+        
+        <% }) %>
+      </div>
+    </p>
+
+  </div>
+<!-- </div> -->
+
+<%- include('partials/footer') %>
